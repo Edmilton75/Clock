@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-2);
+  font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  /* colors theme */
+  --clr-1: hsl(235, 21%, 21%);
+  --clr-2: hsl(218, 17%, 62%);
+  --clr-3: hsl(197, 24%, 94%);
+  --clr-4: hsl(353, 86%, 54%);
+  --clr-5: hsl(350, 96%, 43%);
+}
+
+img {
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 60px;
+  z-index: 2;
+}
+
+.clock {
+  position: relative;
+  background-color: var(--clr-3);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid var(--clr-1);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.number div {
+  position: absolute;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--clr-1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.twelve {
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.three {
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.six {
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nine {
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrows {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: var(--clr-4);
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  z-index: 4;
+}
+
+.arrows div {
+  background-color: var(--clr-1);
+  width: 7px;
+  position: absolute;
+  height: 120px;
+  transform-origin: bottom center;
+  bottom: 50%;
+  z-index: 3;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.arrows .hour {
+  height: 80px;
+  transform: rotate(30deg);
+  background-color: var(--clr-5);
+}
+
+.arrows .second {
+  height: 150px;
+  transform: rotate(250deg);
+  background-color: var(--clr-4);
+}
+
+.container-data {
+  display: flex;
+  margin: 0 auto;
+  height: 30px;
+  width: 80%;
+  margin-top: 15px;
+  background-color: var(--clr-3);
+  border: 3px solid var(--clr-1);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#calender {
+  color: var(--clr-5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#week {
+  color: var(--clr-1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
